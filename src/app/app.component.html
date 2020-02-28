@@ -1,15 +1,27 @@
-<header>
-  <div class="logo">
-    <i class="fa fa-coffee"></i>
-    <a href="#">vitalii lynnyk</a>
+<header class="header">
+  <div class="header-logo">
+    <i class="fa fa-coffee header-logo__icon"></i>
+    <a href="#"
+       class="header-logo__name">vitalii lynnyk</a>
   </div>
-  <nav>
-    <ul>
-      <li><a href="#">home</a></li>
-      <li><a href="#">projects</a></li>
-      <li><a href="#">resuume</a></li>
-      <li><a href="#">contacts</a></li>
-      <li><a href="#">change theme</a></li>
+
+  <input type="checkbox"
+         class="header-toggle__checkbox"
+         id="toggle">
+  <label for="toggle"
+         class="header-toggle header-toggle__button">
+    <span class="header-toggle header-toggle__icon">
+      &nbsp;
+    </span></label>
+  <div class="header-toggle header-toggle__background">&nbsp;</div>
+
+  <nav class="header-nav">
+    <ul class="header-nav__list">
+      <li class="header-nav__list-item"><a href="#">home</a></li>
+      <li class="header-nav__list-item"><a href="#">projects</a></li>
+      <li class="header-nav__list-item"><a href="#">resuume</a></li>
+      <li class="header-nav__list-item"><a href="#">contacts</a></li>
+      <li class="header-nav__list-item"><a href="#">change theme</a></li>
     </ul>
   </nav>
 </header>
