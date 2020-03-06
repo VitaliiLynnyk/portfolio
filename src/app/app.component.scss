@@ -24,9 +24,10 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 .header {
   display: flex;
   justify-content: space-between;
+  background-color: $color-white;
   box-shadow: $shadow-light;
 
-  min-height: 3rem;
+  height: 5rem;
   align-items: center;
 
   position: fixed;
@@ -204,5 +205,56 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
         }
       }
     }
+  }
+}
+
+
+
+
+
+.main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &-left {
+    padding: 10rem 2.5rem;
+    display: grid;
+    grid-template-rows: 1fr .5fr 200px;
+    grid-gap: 1rem;
+
+    &-header {
+      margin: 0 auto;
+
+      img {
+        border-radius: 50%;
+      }
+
+      h1 {
+
+      }
+
+      p {
+
+      }
+    }
+
+    &-details {
+    }
+
+    &-footer {
+      h5 {
+
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+      }
+    }
+  }
+
+  &-right {
+
   }
 }
