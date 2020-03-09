@@ -1,25 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Luckiest+Guy&display=swap');
+
+//font-family: 'Luckiest Guy', cursive;
+//font-family: 'Cormorant Garamond', serif;
+
 $color-white: #fff;
 $color-dark: #000;
-
-$color-primary: #4A09FF;
-$color-primary-light: #7C4EFD; //5B20FF
-$color-primary-dark: #3700D1; //2A019D
 //
-$color-secondary: #094BFF;
-$color-secondary-light: #4E7DFD; //1F5BFF
-$color-secondary-dark: #012A9A;
+$color-primary: #094BFF;
+$color-primary-light: #4E7DFD; //1F5BFF
+$color-primary-dark: #012A9A;
 //
-$color-grey-light-1: #faf9f9;
-$color-grey-light-2: #f4f2f2;
-$color-grey-light-3: #f0eeee;
-$color-grey-light-4: #ccc;
-//
-$color-grey-dark-1: #333;
-$color-grey-dark-2: #777;
-$color-grey-dark-3: #999;
-
 $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+//
+$font-family-main: 'Cormorant Garamond';
+$font-family-secondary: 'Luckiest Guy';
 
 .header {
   display: flex;
@@ -33,6 +28,7 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   position: fixed;
   z-index: 1;
   width: 100%;
+  font-family: $font-family-secondary;
 
   &-logo {
     &__icon {
@@ -171,6 +167,8 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
         text-align: center;
         width: 100%;
         flex-direction: column;
+
+        font-size: 3rem;
       }
 
       &-item {
@@ -216,6 +214,8 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+
+
   @media (max-width: 730px) {
     grid-template-columns: 1fr;
   }
@@ -226,19 +226,22 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
     grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));;
     grid-gap: 1rem;
 
+    font-family: $font-family-main;
+
     @media (max-width: 730px) {
       padding-bottom: 0;
     }
 
     &-header {
-      margin: 0 auto;
+      text-align: center;
 
       img {
         border-radius: 50%;
       }
 
       h1 {
-
+        text-transform: uppercase;
+        font-family: $font-family-secondary;
       }
 
       p {
@@ -266,6 +269,7 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
     &__title {
       font-size: 5rem;
+      font-family: $font-family-main;
     }
 
     &__list {
@@ -279,10 +283,10 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
       li {
         padding: .5rem;
+        font-family: $font-family-main;
 
         img {
-          filter: grayscale(100%) brightness(70%) contrast(2);
-
+          filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
           &:hover {
             filter: none;
           }
@@ -292,8 +296,8 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   }
 }
 
-
 .footer {
+  font-family: $font-family-main;
   text-align: center;
   padding: 2rem;
 
@@ -317,7 +321,7 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
           width: 5rem;
           height: 5rem;
           display: block;
-          background: linear-gradient(45deg, red, #002A8F);
+          background: linear-gradient(45deg, $color-primary-light, $color-primary-dark);
           transition: all 265ms ease-out;
         }
 
@@ -328,8 +332,8 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
         &:hover i {
           transform: scale(2);
-          color: red;
-          background: -webkit-linear-gradient(45deg, red, #002A8F);
+          color: $color-primary;
+          background: -webkit-linear-gradient(45deg, $color-primary-light, $color-primary-dark);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           transition: all 265ms ease-in;
@@ -337,7 +341,7 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
       }
 
       i {
-        color: #fff;
+        color: $color-white;
         position: absolute;
         font-size: 3rem;
         top: 0.5rem;
