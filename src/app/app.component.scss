@@ -19,7 +19,7 @@ $font-family-secondary: 'Luckiest Guy';
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: $color-white;
+  background-color: rgba($color-white, .8);
   box-shadow: $shadow-light;
 
   height: 5rem;
