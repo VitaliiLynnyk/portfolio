@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Luckiest+Guy&display=swap');
+
+//font-family: 'Luckiest Guy', cursive;
+//font-family: 'Cormorant Garamond', serif;
+
+$color-white: #fff;
+$color-dark: #000;
+//
+$color-primary: #094BFF;
+$color-primary-light: #4E7DFD; //1F5BFF
+$color-primary-dark: #012A9A;
+//
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+//
+$font-family-main: 'Cormorant Garamond';
+$font-family-secondary: 'Luckiest Guy';
+
+
+.footer {
+  font-family: $font-family-main;
+  text-align: center;
+  padding: 2rem;
+
+  &-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      display: inline-block;
+      margin: 0.15em;
+      position: relative;
+      //font-size: 1.2em;
+
+      a {
+        display: inline-block;
+
+        &:before {
+          transform: scale(1);
+          content: " ";
+          width: 5rem;
+          height: 5rem;
+          display: block;
+          background: linear-gradient(45deg, $color-primary-light, $color-primary-dark);
+          transition: all 265ms ease-out;
+        }
+
+        &:hover:before {
+          transform: scale(0);
+          transition: all 265ms ease-in;
+        }
+
+        &:hover i {
+          transform: scale(2);
+          color: $color-primary;
+          background: -webkit-linear-gradient(45deg, $color-primary-light, $color-primary-dark);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 265ms ease-in;
+        }
+      }
+
+      i {
+        color: $color-white;
+        position: absolute;
+        font-size: 3rem;
+        top: 0.5rem;
+        left: 1rem;
+        transition: all 265ms ease-out;
+      }
+    }
+  }
+
+  &-about {
+
+  }
+}

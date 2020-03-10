@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Luckiest+Guy&display=swap');
+
+//font-family: 'Luckiest Guy', cursive;
+//font-family: 'Cormorant Garamond', serif;
+
+$color-white: #fff;
+$color-dark: #000;
+//
+$color-primary: #094BFF;
+$color-primary-light: #4E7DFD; //1F5BFF
+$color-primary-dark: #012A9A;
+//
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+//
+$font-family-main: 'Cormorant Garamond';
+$font-family-secondary: 'Luckiest Guy';
+
+.main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+
+  @media (max-width: 730px) {
+    grid-template-columns: 1fr;
+  }
+
+  &-left {
+    padding: 10rem 2.5rem 5rem 2.5rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));;
+    grid-gap: 1rem;
+
+    font-family: $font-family-main;
+
+    @media (max-width: 730px) {
+      padding-bottom: 0;
+    }
+
+    &-header {
+      text-align: center;
+
+      img {
+        border-radius: 50%;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-family: $font-family-secondary;
+      }
+
+      p {
+
+      }
+    }
+
+    &-details {
+    }
+
+    &-footer {
+      h5 {
+
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+      }
+    }
+  }
+
+  &-right {
+    padding: 10rem 2.5rem 5rem 2.5rem;
+
+    &__title {
+      font-size: 5rem;
+      font-family: $font-family-main;
+    }
+
+    &__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: auto;
+      grid-gap: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+
+      li {
+        padding: .5rem;
+        font-family: $font-family-main;
+
+        img {
+          filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+          &:hover {
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+}
