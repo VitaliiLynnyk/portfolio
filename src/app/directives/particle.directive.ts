@@ -1,7 +1,7 @@
 import { Directive, ElementRef, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-import { particlesConfig } from '../../assets/particles';
+import { particlesConfig } from '../../assets/particles/particles';
 
 declare let particlesJS: any; // Required to be properly interpreted by TypeScript.
 
