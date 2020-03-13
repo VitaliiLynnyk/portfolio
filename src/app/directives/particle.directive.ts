@@ -1,5 +1,5 @@
-import { Directive, ElementRef, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { Directive, ElementRef, Inject, OnInit } from '@angular/core';
 
 import { particlesConfig } from '../../assets/particles/particles';
 

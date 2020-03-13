@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProjectsComponent } from './projects.component';
+import { ProjectsRoutingModule } from './projects-routing.module';
 
 @NgModule({
   declarations: [ ProjectsComponent ],
-  exports: [ ProjectsComponent ],
-  imports: [ CommonModule ]
+  imports: [
+    CommonModule,
+    ProjectsRoutingModule
+  ]
 })
-export class ProjectsModule { }
+export class ProjectsModule {}

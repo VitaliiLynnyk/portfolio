@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './portal-page.html',
   styleUrls: [ './portal-page.scss' ]
 })
-export class PortalPageComponent { }
+export class PortalPageComponent {}

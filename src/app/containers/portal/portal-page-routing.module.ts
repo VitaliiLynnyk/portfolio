@@ -1,34 +1,23 @@
-import { ContactsComponent } from './../../components/contacts/contacts.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from 'src/app/components/home/home.component';
-import { ProjectsComponent } from 'src/app/components/projects/projects.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'contacts', component: ContactsComponent }
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full'
-  // },
-  // {
-  //   path: 'home',
-  //   component: HomePageComponent
-  // },
-  // {
-  //   path: 'projects',
-  //   component: ProjectsPageComponent
-  // },
-  // {
-  //   path: '**',
-  //   redirectTo: 'home'
-  // }
+  {
+    path: 'home',
+    loadChildren: () => import('../../components/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'projects',
+    loadChildren: () => import('../../components/projects/projects.module').then(m => m.ProjectsModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('../../components/contacts/contacts.module').then(m => m.ContactsModule)
+  }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(appRoutes) ],
+  imports: [ RouterModule.forChild(appRoutes) ],
   exports: [ RouterModule ]
 })
-export class PortalRoutingModule { }
+export class PortalRoutingModule {}
