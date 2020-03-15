@@ -1,0 +1,17 @@
+<main class="main">
+  <h1 class="main__title">Projects</h1>
+  <section class="main__section">
+    <div class="card"
+         *ngFor="let project of arrOfProjects">
+      <h2>{{project.name}}</h2>
+      <a [href]="project.projectUrl"
+         target="_blank">
+        <img [src]="project.imgUrl"/>
+      </a>
+      <ul>
+
+        <li *ngFor="let item of project.stack">{{item}}</li>
+      </ul>
+    </div>
+  </section>
+</main>
