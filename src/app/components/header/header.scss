@@ -1,12 +1,9 @@
 .header {
   display: flex;
   justify-content: space-between;
-  //background-color: rgba(var(--background-default), .8);
   box-shadow: var(--background-default-shadow);
-
   height: 5rem;
   align-items: center;
-
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -36,7 +33,6 @@
     }
 
     &__button {
-      //background-color: var(--primary-default);
       height: 3rem;
       width: 3rem;
       position: fixed;
@@ -44,7 +40,6 @@
       right: 10px;
       border-radius: 50%;
       z-index: 2000;
-      //box-shadow: 0 1rem 3rem rgba(black, 0.1);
       text-align: center;
       cursor: pointer;
     }
@@ -140,6 +135,7 @@
 
     &__list {
       list-style: none;
+      align-items: center;
       display: flex;
 
       @media (max-width: 730px) {
@@ -166,20 +162,12 @@
             color: var(--foreground-default);
             text-decoration: none;
             text-transform: uppercase;
-            //background-image: linear-gradient(
-            //  128deg,
-            //  transparent 0%,
-            //  transparent 50%,
-            //  $color-secondary-dark 50%
-            //);
-            //background-size: 250%;
             transition: all 0.5s;
           }
 
           &:hover,
           &:active {
             background-position: 100%;
-            // color: $color-secondary-dark;
             transform: translateY(.1rem);
 
             @media (max-width: 730px) {
@@ -194,4 +182,67 @@
 
 .active {
   color: var(--primary-default) !important;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height: 3rem;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider {
+      background-color: var(--foreground-default);
+    }
+
+    &:checked + .slider:before {
+      transform: translateX(3rem);
+      background: var(--primary-default) url("../../../assets/techIcons/moon-and-stars.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 4rem;
+    }
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-default);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 3rem;
+      width: 3rem;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      background: var(--primary-default) url("../../../assets/techIcons/sun-cloud.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 4rem;
+      transform: rotateX(180deg);
+    }
+  }
+
+  .round {
+    border-radius: 3rem;
+
+    &:before {
+      border-radius: 50%;
+    }
+  }
 }
