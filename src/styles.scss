@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Luckiest+Guy&display=swap');
 
 :root {
-  --color-white: #fff;
-  --color-dark: #000;
-
-  --color-primary: #094BFF;
-  --color-primary-light: #4E7DFD; //1F5BFF
-  --color-primary-dark: #012A9A;
-
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-
   --font-family-main: 'Cormorant Garamond', serif;
   --font-family-secondary: 'Luckiest Guy', cursive;
 }
@@ -33,6 +23,8 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   font-size: 1.6rem;
+  background-color: var(--background-default);
+  color: var(--foreground-default);
 
   a {
     text-decoration: none;

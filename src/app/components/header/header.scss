@@ -1,8 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(var(--color-white), .8);
-  box-shadow: var(--shadow-light);
+  //background-color: rgba(var(--background-default), .8);
+  box-shadow: var(--background-default-shadow);
 
   height: 5rem;
   align-items: center;
@@ -13,6 +13,8 @@
   font-family: var(--font-family-secondary);
 
   &-logo {
+    color: var(--primary-default);
+
     &__icon {
       margin: 0 1rem;
     }
@@ -34,7 +36,7 @@
     }
 
     &__button {
-      //background-color: $color-white;
+      //background-color: var(--primary-default);
       height: 3rem;
       width: 3rem;
       position: fixed;
@@ -56,7 +58,7 @@
       &::after {
         width: 1.5rem;
         height: 2px;
-        background-color: var(--color-dark);
+        background-color: var(--foreground-default);
         display: inline-block;
       }
 
@@ -84,7 +86,7 @@
       position: fixed;
       top: 10px;
       right: 10px;
-      background-image: radial-gradient(var(--color-primary-light), var(--color-primary-dark));
+      background-image: radial-gradient(var(--background-secondary), var(--background-secondary));
       z-index: 1000;
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
@@ -161,7 +163,7 @@
           &:visited {
             display: inline-block;
             font-weight: 300;
-            color: var(--color-dark);
+            color: var(--foreground-default);
             text-decoration: none;
             text-transform: uppercase;
             //background-image: linear-gradient(
@@ -170,7 +172,7 @@
             //  transparent 50%,
             //  $color-secondary-dark 50%
             //);
-            background-size: 250%;
+            //background-size: 250%;
             transition: all 0.5s;
           }
 
@@ -191,5 +193,5 @@
 }
 
 .active {
-  color: var(--color-primary-dark) !important;
+  color: var(--primary-default) !important;
 }

@@ -19,9 +19,11 @@
 
     &-header {
       text-align: center;
+      color: var(--primary-default);
 
       img {
         border-radius: 50%;
+        box-shadow: var(--background-default-shadow);
       }
 
       h1 {
@@ -68,9 +70,10 @@
 
       li {
         padding: .5rem;
+        font-weight: 900;
 
         img {
-          filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+          filter: var(--img-filter);
           cursor: pointer;
 
           &:hover {
@@ -83,7 +86,7 @@
 }
 
 .btn {
-  color: var(--color-white);
+  color: var(--primary-default);
   padding: 1rem;
   font-size: inherit;
   border: none;
@@ -95,7 +98,7 @@
   }
 
   &--blue {
-    background: -webkit-linear-gradient(45deg, var(--color-primary-light), var(--color-primary-dark));
+    border: 1px solid var(--primary-default);
   }
 
   &--center {
