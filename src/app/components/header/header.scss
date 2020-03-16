@@ -86,7 +86,7 @@
       position: fixed;
       top: 10px;
       right: 10px;
-      background-image: radial-gradient(var(--background-secondary), var(--background-secondary));
+      background-image: radial-gradient(at top right,var(--background-secondary), var(--background-secondary));
       z-index: 1000;
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
