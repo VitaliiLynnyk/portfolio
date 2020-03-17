@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { ParticleDirective } from './directives/particle.directive';
 import { PortalPageModule } from './containers/portal/portal-page.module';
+import { ParticleDirective } from './directives/particle.directive';
 
 @NgModule({
   declarations: [
@@ -13,8 +12,7 @@ import { PortalPageModule } from './containers/portal/portal-page.module';
   ],
   imports: [
     BrowserModule,
-    PortalPageModule,
-    AppRoutingModule
+    PortalPageModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

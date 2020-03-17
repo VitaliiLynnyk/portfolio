@@ -6,12 +6,17 @@ import { HomeComponent } from './home.component';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'home'
-  },
-  {
-    path: '',
-    component: HomeComponent
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      }
+    ]
   }
 ];
 
