@@ -1,0 +1,39 @@
+.main {
+  padding: 10rem 2.5rem 5rem 2.5rem;
+  text-align: center;
+
+  .title {
+    text-align: center;
+  }
+
+  form {
+    justify-content: center;
+    max-width: 75%;
+    margin: 5rem auto 2rem auto;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 0.5fr;
+    grid-gap: 1rem;
+    font-size: 1.5rem;
+
+    input,
+    textarea,
+    button {
+      font-size: inherit;
+      background-color: inherit;
+      padding: 1rem;
+      box-shadow: var(--background-default-shadow);
+      border: 1px solid var(--primary-default);
+      color: inherit;
+    }
+  }
+}
+
+.is-invalid {
+  border: 1px solid var(--danger-color) !important;
+}
+
+.invalid-error {
+  color: var(--danger-color);
+  font-weight: 900;
+}

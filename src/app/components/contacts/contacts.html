@@ -1,1 +1,97 @@
+<main class="main">
+  <h1 class="main__title title">Contact me</h1>
+  <h2 class="main__title-sub title">i'll be glad to answer your questions</h2>
+  <form (ngSubmit)="sendMsg(f); f.reset();"
+        #f="ngForm">
+    <input placeholder="Your name"
+           type="text"
+           tabindex="1"
+           id="name"
+           name="name"
+           required
+           minlength="3"
+           class="form-control"
+           [(ngModel)]="msg.name"
+           #name="ngModel"
+           [ngClass]="{ 'is-invalid': name.errors && (f.submitted || name.touched) }"
+           autofocus>
+    <div *ngIf="name.errors?.required && (name.touched || name.dirty)"
+         class="invalid-error">
+      Name is required.
+    </div>
+    <div *ngIf="name.errors?.minlength && (name.touched || name.dirty)"
+         class="invalid-error">
+      Name must be at least 3 characters long.
+    </div>
+    <input placeholder="Your Email Address"
+           type="email"
+           tabindex="2"
+           id="email"
+           name="email"
+           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+           size="30"
+           class="form-control"
+           [(ngModel)]="msg.email"
+           #email="ngModel"
+           [ngClass]="{ 'is-invalid': email.errors && (f.submitted || email.touched) }"
+           required>
+    <div *ngIf="email.errors && (email.touched || email.dirty)"
+         class="invalid-error">
+      Email is required.
+    </div>
+    <input placeholder="Your Phone Number"
+           type="tel"
+           tabindex="3"
+           id="phone"
+           name="phone"
+           class="form-control"
+           [(ngModel)]="msg.phone"
+           #phone="ngModel"
+           pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+           [ngClass]="{ 'is-invalid': phone.errors && (f.submitted || phone.touched) }"
+           required>
+    <div *ngIf="phone.errors && (phone.touched || phone.dirty)"
+         class="invalid-error">
+      Invalid Phone.
+    </div>
+    <input placeholder="Subject"
+           type="text"
+           tabindex="4"
+           id="subject"
+           name="subject"
+           minlength="6"
+           class="form-control"
+           [(ngModel)]="msg.subject"
+           #subject="ngModel"
+           [ngClass]="{ 'is-invalid': subject.errors && (f.submitted || subject.touched) }"
+           required>
+    <div *ngIf="subject.errors && (subject.touched || subject.dirty)"
+         class="invalid-error">
+      Invalid Subject.
+    </div>
+    <textarea placeholder="Type your Message Here...."
+              tabindex="5"
+              id="body"
+              name="body"
+              minlength="50"
+              class="form-control"
+              [(ngModel)]="msg.body"
+              #body="ngModel"
+              [ngClass]="{ 'is-invalid': body.errors && (f.submitted || body.touched) }"
+              required></textarea>
 
+    <div *ngIf="body.errors?.required && (body.touched || body.dirty)"
+         class="invalid-error">
+      Body is required.
+    </div>
+    <div *ngIf="body.errors?.minlength && (body.touched || body.dirty)"
+         class="invalid-error">
+      Body must be at least 50 characters long.
+    </div>
+    <button name="submit"
+            type="submit"
+            [ngClass]="{ 'is-invalid': !f.valid }"
+            [disabled]="!f.valid">Submit
+    </button>
+  </form>
+</main>
