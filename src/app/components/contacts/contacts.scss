@@ -26,6 +26,11 @@
       border: 1px solid var(--primary-default);
       color: inherit;
     }
+
+    textarea {
+      resize: vertical;
+      min-height: 10rem;
+    }
   }
 }
 
