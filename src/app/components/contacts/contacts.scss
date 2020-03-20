@@ -6,6 +6,15 @@
     text-align: center;
   }
 
+  .is-invalid {
+    border: 1px solid var(--danger-color) !important;
+  }
+
+  .invalid-error {
+    color: var(--danger-color);
+    font-weight: 900;
+  }
+
   form {
     justify-content: center;
     max-width: 75%;
@@ -32,13 +41,4 @@
       min-height: 10rem;
     }
   }
-}
-
-.is-invalid {
-  border: 1px solid var(--danger-color);
-}
-
-.invalid-error {
-  color: var(--danger-color);
-  font-weight: 900;
 }

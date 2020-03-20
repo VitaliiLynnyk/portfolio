@@ -3,6 +3,7 @@
   <h2 class="main__title-sub title">i'll be glad to answer your questions</h2>
   <form (ngSubmit)="sendMsg(f); f.reset();"
         #f="ngForm">
+    <label for="name"></label>
     <input placeholder="Your name"
            type="text"
            tabindex="1"
@@ -23,6 +24,7 @@
          class="invalid-error">
       Name must be at least 3 characters long.
     </div>
+    <label for="email"></label>
     <input placeholder="Your Email Address"
            type="email"
            tabindex="2"
@@ -39,6 +41,7 @@
          class="invalid-error">
       Email is required.
     </div>
+    <label for="phone"></label>
     <input placeholder="Your Phone Number"
            type="tel"
            tabindex="3"
@@ -54,6 +57,7 @@
          class="invalid-error">
       Invalid Phone.
     </div>
+    <label for="subject"></label>
     <input placeholder="Subject"
            type="text"
            tabindex="4"
@@ -69,6 +73,7 @@
          class="invalid-error">
       Invalid Subject.
     </div>
+    <label for="body"></label>
     <textarea placeholder="Type your Message Here...."
               tabindex="5"
               id="body"
@@ -79,7 +84,6 @@
               #body="ngModel"
               [ngClass]="{ 'is-invalid': body.errors && (f.submitted || body.touched) }"
               required></textarea>
-
     <div *ngIf="body.errors?.required && (body.touched || body.dirty)"
          class="invalid-error">
       Body is required.
