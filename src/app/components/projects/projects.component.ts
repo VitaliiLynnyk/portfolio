@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   arrOfProjects = [
     {
-      imgUrl: 'https://user-images.githubusercontent.com/22242511/73015382-3193d600-3e1c-11ea-84db-c997627864ff.png',
+      imgUrl: '../assets/project-imgs/test-system.jpg',
       name: 'TestSystem',
       projectUrl: 'https://github.com/VitaliiLynnyk/web-app-practice',
       stack: [
@@ -19,7 +19,7 @@ export class ProjectsComponent {
       ]
     },
     {
-      imgUrl: 'https://user-images.githubusercontent.com/22242511/76707580-9b2fb280-66f0-11ea-830f-20c37881a38c.png',
+      imgUrl: '../assets/project-imgs/google-fonts.jpg',
       name: 'Favorite Fonts',
       projectUrl: 'https://github.com/VitaliiLynnyk/soloproject-tier2-favfonts',
       stack: [
