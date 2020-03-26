@@ -12,6 +12,11 @@
 
     .header {
       color: var(--primary-default);
+      text-shadow: var(--text-default-shadow);
+    }
+
+    details {
+      cursor: pointer;
     }
   }
 
@@ -42,8 +47,14 @@
     font-weight: 900;
 
     &:hover {
+      cursor: pointer;
+
       .img-svg {
         filter: none;
+      }
+
+      p {
+        text-shadow: var(--text-default-shadow);
       }
     }
   }
@@ -51,12 +62,10 @@
 
 .img {
   max-width: 20rem;
-  border-radius: 50%;
   box-shadow: var(--background-default-shadow);
 
   &-svg {
     filter: var(--img-filter);
-    cursor: pointer;
   }
 }
 
@@ -64,13 +73,7 @@
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 800;
-
-  &-sub {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 400;
-    cursor: pointer;
-  }
+  text-shadow: var(--text-default-shadow);
 }
 
 .btn {

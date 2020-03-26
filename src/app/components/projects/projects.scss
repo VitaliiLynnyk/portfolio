@@ -4,6 +4,7 @@
   &__title {
     font-weight: 700;
     margin-bottom: 2rem;
+    text-shadow: var(--text-default-shadow);
   }
 
   &__section {
@@ -26,6 +27,7 @@
 
       h2 {
         text-align: center;
+        text-shadow: var(--text-default-shadow);
       }
 
       img {
