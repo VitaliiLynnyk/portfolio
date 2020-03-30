@@ -1,5 +1,5 @@
-<div class="portal">
+<div class="portal" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
   <app-header></app-header>
-  <router-outlet></router-outlet>
+  <router-outlet #o="outlet"></router-outlet>
   <app-footer></app-footer>
 </div>
