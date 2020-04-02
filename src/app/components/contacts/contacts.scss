@@ -4,6 +4,10 @@
 
   .title {
     text-align: center;
+
+    &-sub {
+      color: var(--primary-default);
+    }
   }
 
   .is-invalid {

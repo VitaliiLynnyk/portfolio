@@ -12,7 +12,6 @@
 
     .header {
       color: var(--primary-default);
-      text-shadow: var(--text-default-shadow);
     }
 
     details {
@@ -30,6 +29,10 @@
     @media (max-width: 730px) {
       padding: 5rem 2.5rem 2rem 2.5rem;
     }
+  }
+
+  .blue-color {
+    color: var(--primary-default);
   }
 }
 
@@ -49,12 +52,8 @@
     &:hover {
       cursor: pointer;
 
-      .img-svg {
-        filter: none;
-      }
-
       p {
-        text-shadow: var(--text-default-shadow);
+        color: var(--primary-default);
       }
     }
   }
@@ -63,29 +62,27 @@
 .img {
   max-width: 20rem;
   box-shadow: var(--background-default-shadow);
-
-  &-svg {
-    filter: var(--img-filter);
-  }
 }
 
 .title {
   font-size: 3rem;
   text-transform: uppercase;
-  font-weight: 800;
-  text-shadow: var(--text-default-shadow);
+  font-weight: 900;
 }
 
 .btn {
   color: var(--primary-default);
   padding: 1rem;
+  margin: 1rem auto;
   font-size: inherit;
   border: none;
   display: inline-block;
+  box-shadow: var(--background-default-shadow);
   transition: all 265ms ease-in;
 
   &:hover {
     transform: translateY(0.1rem);
+    box-shadow: var(--background-dark-shadow);
   }
 
   &--blue {

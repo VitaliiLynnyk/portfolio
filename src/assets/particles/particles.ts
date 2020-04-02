@@ -1,20 +1,20 @@
 export const particlesConfig = {
   particles: {
     number: {
-      value: 35,
+      value: 45,
       density: {
         enable: false,
         value_area: 2000
       }
     },
     color: {
-      value: '#4E7DFD'
+      value: '#088FFF'
     },
     shape: {
       type: 'circle',
       stroke: {
         width: 0,
-        color: '#4E7DFD'
+        color: '#088FFF'
       },
       polygon: {
         nb_sides: 5
@@ -48,7 +48,7 @@ export const particlesConfig = {
     line_linked: {
       enable: true,
       distance: 150,
-      color: '#4E7DFD',
+      color: '#088FFF',
       opacity: 0.3,
       width: 1
     },

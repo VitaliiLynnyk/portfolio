@@ -27,4 +27,4 @@ import { PortalPageComponent } from './portal-page.component';
     PortalRoutingModule
   ]
 })
-export class PortalPageModule {}
+export class PortalPageModule { }

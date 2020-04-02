@@ -21,7 +21,11 @@
           width: 5rem;
           height: 5rem;
           display: block;
-          background: linear-gradient(45deg, var(--primary-default), var(--primary-default));
+          background: linear-gradient(
+            45deg,
+            var(--primary-default),
+            var(--primary-default)
+          );
           transition: all 265ms ease-out;
           box-shadow: var(--background-default-shadow);
         }
@@ -34,7 +38,11 @@
         &:hover i {
           transform: scale(2);
           color: var(--primary-default);
-          background: -webkit-linear-gradient(45deg, var(--primary-default), var(--primary-default));
+          background: -webkit-linear-gradient(
+            45deg,
+            var(--primary-default),
+            var(--primary-default)
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           transition: all 265ms ease-in;
@@ -50,5 +58,10 @@
         transition: all 265ms ease-out;
       }
     }
+  }
+
+  .color-blue {
+    cursor: pointer;
+    color: var(--primary-default);
   }
 }

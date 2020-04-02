@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  box-shadow: var(--background-default-shadow);
+  box-shadow: var(--header-default-shadow);
   height: 5rem;
   align-items: center;
   position: fixed;
@@ -81,7 +81,11 @@
       position: fixed;
       top: 10px;
       right: 10px;
-      background-image: radial-gradient(at top right, var(--background-secondary), var(--background-secondary));
+      background-image: radial-gradient(
+        at top right,
+        var(--background-secondary),
+        var(--background-secondary)
+      );
       z-index: 1000;
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
@@ -168,7 +172,7 @@
           &:hover,
           &:active {
             background-position: 100%;
-            transform: translateY(.1rem);
+            transform: translateY(0.1rem);
 
             @media (max-width: 730px) {
               transform: translateX(1rem);
@@ -201,7 +205,8 @@
 
     &:checked + .slider:before {
       transform: translateX(3rem);
-      background: var(--primary-default) url("../../../assets/techIcons/moon-and-stars.svg");
+      background: var(--primary-default)
+        url("../../../assets/techIcons/moon-and-stars.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 4rem;
@@ -230,7 +235,8 @@
       margin: auto 0;
       -webkit-transition: 0.4s;
       transition: 0.4s;
-      background: var(--primary-default) url("../../../assets/techIcons/sun-cloud.svg");
+      background: var(--primary-default)
+        url("../../../assets/techIcons/sun-cloud.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 4rem;
